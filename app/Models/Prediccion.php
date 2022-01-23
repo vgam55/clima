@@ -22,9 +22,8 @@ class Prediccion extends Model
         $response = curl_exec($ch);
 
         curl_close($ch);
-        $data = json_decode($response);
-       
-       return json_encode($data);
+        $data = json_encode($response);
+        return json_decode($data);
 
     }
 }

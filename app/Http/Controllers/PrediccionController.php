@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Prediccion;
+use Illuminate\Support\Facades\View;
 
 class PrediccionController extends Controller
 {
     public function findByCity (Request $request)
     {   
-        $prediccion=new Prediccion();
+ $prediccion=new Prediccion();
         $apiEndPoint="http://api.weatherapi.com/v1/";
         $tipo="search.json?";
         $clave="key="."68f49f4f896943de89c214326221101"."&";
